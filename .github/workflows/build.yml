@@ -33,7 +33,7 @@ jobs:
           path: out/*
 
   flashable:
-    runs-on: ubuntu-20.04
+    runs-on: 
     needs: build
     if: ${{ github.event_name == 'workflow_dispatch' }} # Manual trigger only
     steps:
@@ -67,7 +67,7 @@ jobs:
             out/system.img
 
   devel-flashable:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     needs: build
     steps:
       - name: Checkout repository
@@ -100,7 +100,7 @@ jobs:
             out/system.img
 
   devel-flashable-focal:
-    runs-on: ubuntu-20.04
+    runs-on: 
     needs: build
     steps:
       - name: Checkout repository
