@@ -3,7 +3,7 @@ name: Ubuntu Touch Build
 on:
   push:
     branches:
-      - main
+      - master
   workflow_dispatch:
 
 permissions:
@@ -99,7 +99,7 @@ jobs:
             out/system.img
 
   devel-flashable-focal:
-    runs-on: 
+    runs-on: ubuntu-22.04
     needs: build
     steps:
       - name: Checkout repository
