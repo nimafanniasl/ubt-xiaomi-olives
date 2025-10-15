@@ -1,6 +1,5 @@
 name: Ubuntu Touch Build
 
-
 on:
   push:
     branches:
@@ -33,7 +32,7 @@ jobs:
           path: out/*
 
   flashable:
-    runs-on: 
+    runs-on: ubuntu-22.04
     needs: build
     if: ${{ github.event_name == 'workflow_dispatch' }} # Manual trigger only
     steps:
